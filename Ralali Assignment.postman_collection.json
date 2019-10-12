@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "0d8ec219-ba48-4a74-a596-3704069e412a",
+		"name": "Ralali Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Negative Scenarios",
+			"item": [
+				{
+					"name": "API2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wrong credentials",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f4f19cdd-348e-49a0-b476-0b21e833c63c",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi.com/?i=tt3896198&apikey=87f0d65",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "tt3896198"
+								},
+								{
+									"key": "apikey",
+									"value": "87f0d65"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wrong method",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0c09c134-8784-4ce7-b963-9f314851f284",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi.com/?i=tt3896198&apikey=87f0d656",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "tt3896198"
+								},
+								{
+									"key": "apikey",
+									"value": "87f0d656"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wrong format",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "26facf21-aade-40df-a546-b3db60404705",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi.com/?_format=1234",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wrong Path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f9375dca-6680-42f1-8c2f-e6ad7e56d7c8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi2.com/?i=tt3896198&apikey=87f0d656",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi2",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "tt3896198"
+								},
+								{
+									"key": "apikey",
+									"value": "87f0d656"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wrong Serach Params",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9c9c85aa-f943-4b3a-86f9-ed4012e32ab8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi.com/?i=tt3896198&apikey=87f0d656&p=Batman",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "tt3896198"
+								},
+								{
+									"key": "apikey",
+									"value": "87f0d656"
+								},
+								{
+									"key": "p",
+									"value": "Batman"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Positive Scenarios",
+			"item": [
+				{
+					"name": "API2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "38f1c8b2-3efb-4623-b9d5-cc4def9c190b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi.com/?i=tt3896198&apikey=87f0d656",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "tt3896198"
+								},
+								{
+									"key": "apikey",
+									"value": "87f0d656"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Correct Creds",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "748edb00-839a-465a-9d12-4aa2449ff554",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi.com/?i=tt3896198&apikey=1a6ee258",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "tt3896198"
+								},
+								{
+									"key": "apikey",
+									"value": "1a6ee258"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb75ed23-4a33-4568-a4db-0eb3191f8db0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.omdbapi.com/?i=tt3896198&apikey=87f0d656&s=Batman",
+							"protocol": "http",
+							"host": [
+								"www",
+								"omdbapi",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "tt3896198"
+								},
+								{
+									"key": "apikey",
+									"value": "87f0d656"
+								},
+								{
+									"key": "s",
+									"value": "Batman"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
